@@ -1,1 +1,7 @@
 <h1>Blog</h1>
+<h2>List of posts</h2>
+<ul>
+  <% @blog_post_titles.each do |post| %>
+    <li><%= post %></li>
+  <% end %>
+</ul>
