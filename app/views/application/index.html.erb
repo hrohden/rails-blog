@@ -1,7 +1,19 @@
 <h1>Blog</h1>
 <h2>List of posts</h2>
-<ul>
-  <% @blog_post_titles.each do |post| %>
-    <li><%= post %></li>
-  <% end %>
-</ul>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Published</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @blog_posts.each do |post| %>
+      <tr>
+        <td><%= post %></td>
+        <td>Author...</td>
+        <td>Date...</td>
+      </tr>
+    <% end %>
+</table>

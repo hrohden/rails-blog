@@ -3,7 +3,7 @@
 # This is a cool class
 class ApplicationController < ActionController::Base
   def index
-    @blog_post_titles = [
+    @blog_posts = [
       '10 Tips for Learning Python',
       'Understanding JavaScript Closures',
       "A Beginner's Guide to HTML and CSS",
