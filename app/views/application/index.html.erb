@@ -12,7 +12,7 @@
     <% @blog_posts.each do |post| %>
       <tr>
         <td><%= post.title %></td>
-        <td>Author...</td>
+        <td><%= post.author %></td>
         <td><%= post.published %></td>
       </tr>
     <% end %>
