@@ -1,19 +1,7 @@
-<h1>Blog</h1>
-<h2>List of posts</h2>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Author</th>
-      <th>Published</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @blog_posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.author %></td>
-        <td><%= post.published %></td>
-      </tr>
-    <% end %>
-</table>
+<div class="p-5 mb-4 bg-body-tertiary rounded-3 text-center">
+  <h1 class="display-4">Rails Blog</h1>
+  <p class="lead">This is a blog to share thoughts about Ruby and Rails development.</p>
+  <hr class="my-4">
+  <p>I'll create important posts and topics to share my experience with Rails.</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+</div>
