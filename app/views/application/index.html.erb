@@ -11,9 +11,9 @@
   <tbody>
     <% @blog_posts.each do |post| %>
       <tr>
-        <td><%= post %></td>
+        <td><%= post.title %></td>
         <td>Author...</td>
-        <td>Date...</td>
+        <td><%= post.published %></td>
       </tr>
     <% end %>
 </table>
