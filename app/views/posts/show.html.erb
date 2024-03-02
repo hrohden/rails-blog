@@ -1,4 +1,6 @@
 <% content_for :title, @post.title %>
-<h1 class="display-1 text-center"><%= @post.title %></h1>
-<p class="lead text-center"><%= @post.headline %></p>
-<%= @post.content.html_safe %>
+<div class="col-9">
+  <h1 class="display-1 text-center"><%= @post.title %></h1>
+  <p class="lead text-center"><%= @post.headline %></p>
+  <%= @post.content.html_safe %>
+</div>
