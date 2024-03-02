@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 # This controller is responsible for handling requests to the blog post page
-class PostController < ApplicationController
+class PostsController < ApplicationController
   def index
-    @blog_posts = BlogPost.all
+    @posts = Post.all
   end
 
   def show
-    @blog_post = BlogPost.find(params[:id])
+    @post = Post.find(params[:id])
   end
 end
