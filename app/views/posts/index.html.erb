@@ -5,7 +5,7 @@
     <tr>
       <th>Title</th>
       <th>Author</th>
-      <th>Published</th>
+      <th class="text-end">Published</th>
     </tr>
   </thead>
   <tbody>
@@ -13,7 +13,7 @@
       <tr>
         <td><%= link_to post.title, post %></td>
         <td><%= post.author %></td>
-        <td><%= post.published %></td>
+        <td class="text-end"><%= post.published.to_formatted_s(:long) %></td>
       </tr>
     <% end %>
   </tbody>
