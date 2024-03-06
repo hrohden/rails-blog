@@ -4,13 +4,15 @@
   <thead> 
     <tr>
       <th>Title</th>
+      <th class="text-end">Published</th>
     </tr>
   </thead>
   <tbody>
+    <% @author.posts.each do |post|  %>
     <tr>
-      <td>
-        Post title...
-      </td>
+      <td><%= link_to post.title, post %></td>
+      <td class="text-end"><%= post.published.to_formatted_s(:long) %></td>
     </tr>
+    <% end %>
   </tbody>
 </table>
