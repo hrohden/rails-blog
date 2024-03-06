@@ -264,5 +264,7 @@ Post.create(title: 'The Future of Web Development: Trends to Watch in 2022', hea
 
 <h2>Conclusion</h2>
 <p>The field of web development is evolving rapidly, driven by technological advancements and changing user expectations. By staying informed about emerging trends and embracing innovative technologies, developers can create immersive, secure, and user-centric web experiences that shape the future of the internet.</p>", author: 'Henrique Rohden', published: Date.new(2022, 4, 15))
+
+Author.create(name: 'Henrique Rohden')
 # rubocop:enable Layout/LineLength
 # rubocop:enable Lint/RedundantCopDisableDirective

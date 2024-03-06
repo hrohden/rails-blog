@@ -1,2 +1,16 @@
 <% content_for :title, "Authors" %>
 <h1>Authors</h1>
+<% if @authors.empty? %>
+  <p>There are no authors in the system.</p>
+<% else %>
+  <table class="table table-striped">
+    <tr>
+      <th>Name</th>
+    </tr>
+    <% @authors.each do |author| %>
+      <tr>
+        <td><%= link_to author.name, author %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
