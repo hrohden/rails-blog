@@ -7,6 +7,9 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+#
+author = Author.create(name: 'Henrique Rohden')
+
 Post.create(title: '10 Tips for Learning Python', headline: 'Python is a great language to learn. Here are some tips to help you get started.', content: "<p>Python has become one of the most popular programming languages in the world, and for good reason. Its simplicity, readability, and versatility make it an ideal choice for beginners and experienced programmers alike. Whether you're just starting out or looking to enhance your skills, here are 10 tips to help you learn Python effectively:</p>
 
 <h2>1. Start with the Basics</h2>
@@ -39,7 +42,7 @@ Post.create(title: '10 Tips for Learning Python', headline: 'Python is a great l
 <h2>10. Be Patient and Persistent</h2>
 <p>Learning Python, like any new skill, takes time and patience. Don't get discouraged by challenges or setbacks along the way. Stay persistent, keep practicing, and celebrate your progress, no matter how small. With dedication and perseverance, you'll soon become proficient in Python and unlock endless opportunities in the world of programming.</p>
 
-<p>In conclusion, learning Python is an exciting journey filled with opportunities for growth and creativity. By following these 10 tips and staying committed to your learning goals, you'll be well on your way to mastering Python and achieving your programming aspirations. Happy coding!</p>", author: 'Henrique Rohden', published: Date.new(2022, 1, 1))
+<p>In conclusion, learning Python is an exciting journey filled with opportunities for growth and creativity. By following these 10 tips and staying committed to your learning goals, you'll be well on your way to mastering Python and achieving your programming aspirations. Happy coding!</p>", author: author, published: Date.new(2022, 1, 1))
 Post.create(title: 'Understanding JavaScript Closures', headline: 'Closures are a powerful feature of JavaScript. Learn how they work and how to use them.', content: "<p>JavaScript closures are a fundamental concept that often confuses new and even experienced developers. However, understanding closures is crucial for mastering JavaScript and writing efficient, secure, and scalable code. This blog post aims to demystify closures by breaking down what they are, how they work, and why they are useful.</p>
 
 <h2>What is a Closure?</h2>
@@ -76,7 +79,7 @@ myClosure(); // Logs: 'I am outside!'
 <p>One important aspect to consider when working with closures is memory management. Since closures can keep an outer function's variables alive after the function has executed, it's essential to understand the implications for memory usage and leaks. However, modern JavaScript engines are quite efficient at managing memory, so closures are generally not a concern in most practical scenarios.</p>
 
 <p>In conclusion, closures are a powerful feature of JavaScript that allow for more flexible and expressive programming. By understanding and leveraging closures, developers can write cleaner, more encapsulated code that is both secure and efficient. As you continue to explore JavaScript, keep closures in mind as a tool in your toolkit for solving common programming challenges.</p>
-", author: 'Henrique Rohden', published: Date.new(2022, 1, 15))
+", author: author, published: Date.new(2022, 1, 15))
 Post.create(title: "A Beginner's Guide to HTML and CSS", headline: 'HTML and CSS are the building blocks of the web. Learn how to use them to create beautiful websites.', content: "<p>HTML and CSS are the foundation of web development. HTML (Hypertext Markup Language) is used to structure the content of web pages, while CSS (Cascading Style Sheets) is used to style and layout those pages. Understanding these two languages is essential for anyone interested in building websites.</p>
 
 <h2>HTML: Structuring Web Content</h2>
@@ -89,7 +92,7 @@ Post.create(title: "A Beginner's Guide to HTML and CSS", headline: 'HTML and CSS
 <p>If you're new to HTML and CSS, there are plenty of resources available to help you get started. Online tutorials, courses, and documentation provide step-by-step guidance on learning and mastering these languages. Practice by building simple web pages and experimenting with different HTML tags and CSS styles.</p>
 
 <h2>Conclusion</h2>
-<p>HTML and CSS form the building blocks of the web. With a solid understanding of these languages, you'll be able to create visually appealing and well-structured websites. Remember to keep practicing, exploring new techniques, and staying updated with the latest web development trends. Happy coding!</p>", author: 'Henrique Rohden', published: Date.new(2022, 2, 1))
+<p>HTML and CSS form the building blocks of the web. With a solid understanding of these languages, you'll be able to create visually appealing and well-structured websites. Remember to keep practicing, exploring new techniques, and staying updated with the latest web development trends. Happy coding!</p>", author: author, published: Date.new(2022, 2, 1))
 Post.create(title: 'Exploring the New Features of React 17', headline: 'React 17 has some great new features. Learn how to use them in your projects.', content: "<p>React 17 was a significant release, not because it introduced flashy new features, but because it focused on improving the upgrade experience and preparing for the future of React. Let's dive into some of the key changes and improvements that came with React 17 and what they mean for developers.</p>
 
 <h2>No New Features?</h2>
@@ -108,7 +111,7 @@ Post.create(title: 'Exploring the New Features of React 17', headline: 'React 17
 <p>React 17 improved warnings and logging for several common issues, making it easier for developers to diagnose and fix problems. This includes warnings about potential memory leaks and clearer messages for certain errors that were previously difficult to understand.</p>
 
 <h2>Conclusion</h2>
-<p>While React 17 might not have introduced groundbreaking new features, its focus on making the framework more future-proof and upgrade-friendly is a significant step forward. These changes lay the groundwork for exciting new developments in React's future versions, making it an important update for any React developer.</p>", author: 'Henrique Rohden', published: Date.new(2022, 2, 15))
+<p>While React 17 might not have introduced groundbreaking new features, its focus on making the framework more future-proof and upgrade-friendly is a significant step forward. These changes lay the groundwork for exciting new developments in React's future versions, making it an important update for any React developer.</p>", author: author, published: Date.new(2022, 2, 15))
 Post.create(title: 'How to Build a RESTful API with Node.js', headline: 'Node.js is a great platform for building APIs. Learn how to create a RESTful API with Node.', content: "<p>Creating a RESTful API with Node.js is a great way to interface with data while using HTTP requests. In this tutorial, we'll walk through the steps to build a simple RESTful API using Node.js and Express, a popular Node.js framework.</p>
 
 <h2>Prerequisites</h2>
@@ -177,7 +180,7 @@ Post.create(title: 'How to Build a RESTful API with Node.js', headline: 'Node.js
 <h2>Conclusion</h2>
 <p>You've now created a simple RESTful API with Node.js and Express! From here, you can add more features, such as connecting to a database, authenticating users, or deploying your API to the cloud.</p>
 
-<p>Building a RESTful API with Node.js is just the beginning. As you become more comfortable, you'll discover the vast possibilities of backend development, creating more complex and robust APIs.</p>", author: 'Henrique Rohden', published: Date.new(2022, 3, 1))
+<p>Building a RESTful API with Node.js is just the beginning. As you become more comfortable, you'll discover the vast possibilities of backend development, creating more complex and robust APIs.</p>", author: author, published: Date.new(2022, 3, 1))
 Post.create(title: 'Demystifying Machine Learning: A Comprehensive Guide', headline: 'Machine learning is a complex topic. Learn the basics and get started with your own projects.', content: "<p>Machine learning (ML) is a fascinating field of artificial intelligence (AI) that enables computers to learn from and make decisions based on data. This comprehensive guide aims to demystify the concepts of machine learning, making them accessible to everyone.</p>
 
 <h2>What is Machine Learning?</h2>
@@ -204,7 +207,7 @@ Post.create(title: 'Demystifying Machine Learning: A Comprehensive Guide', headl
 <p>To dive into machine learning, a strong foundation in mathematics, especially in calculus, linear algebra, and statistics, is beneficial. Familiarity with programming languages such as Python, along with libraries like TensorFlow and scikit-learn, can also give a solid start in ML.</p>
 
 <h2>Conclusion</h2>
-<p>Machine learning is a powerful tool in the AI arsenal, offering the potential to revolutionize how we interact with data and technology. By understanding its core concepts and applications, we can demystify ML and harness its capabilities to solve complex problems and create innovative solutions.</p>", author: 'Henrique Rohden', published: Date.new(2022, 3, 15))
+<p>Machine learning is a powerful tool in the AI arsenal, offering the potential to revolutionize how we interact with data and technology. By understanding its core concepts and applications, we can demystify ML and harness its capabilities to solve complex problems and create innovative solutions.</p>", author: author, published: Date.new(2022, 3, 15))
 Post.create(title: 'Getting Started with Docker: A Step-by-Step Tutorial', headline: 'Docker is a powerful tool for managing containers. Learn how to use it in your projects.', content: "<p>Docker has revolutionized the way developers build, share, and run applications by making it easier to create and deploy applications in lightweight, portable containers. This tutorial will guide you through the basics of Docker, helping you get started with this powerful tool.</p>
 
 <h2>Step 1: Install Docker</h2>
@@ -244,7 +247,7 @@ CMD [\"node\", \"app.js\"]
 <p>This command runs the Docker container in detached mode, maps port 8080 of the container to port 8080 on your host, allowing you to access the Node.js application.</p>
 
 <h2>Conclusion</h2>
-<p>Congratulations! You've just created and run your first Docker container. Docker is a powerful tool that can simplify the deployment process and ensure consistency across environments. As you become more familiar with Docker, you'll discover even more benefits and use cases. Happy Dockering!</p>", author: 'Henrique Rohden', published: Date.new(2022, 4, 1))
+<p>Congratulations! You've just created and run your first Docker container. Docker is a powerful tool that can simplify the deployment process and ensure consistency across environments. As you become more familiar with Docker, you'll discover even more benefits and use cases. Happy Dockering!</p>", author: author, published: Date.new(2022, 4, 1))
 Post.create(title: 'The Future of Web Development: Trends to Watch in 2022', headline: 'Web development is always changing. Learn about the latest trends and how they will impact the future of the web.', content: "<p>As we navigate through the ever-evolving landscape of web development, it's crucial to stay informed about emerging trends and technologies that shape the future of the industry. Here are some key trends to watch in 2022:</p>
 
 <h2>1. Progressive Web Apps (PWAs)</h2>
@@ -263,8 +266,7 @@ Post.create(title: 'The Future of Web Development: Trends to Watch in 2022', hea
 <p>With the rise of data breaches and privacy concerns, cybersecurity is a top priority for web developers and organizations. Implementing robust security measures, such as HTTPS encryption, multi-factor authentication, and data encryption, is essential to protect user data and build trust with customers.</p>
 
 <h2>Conclusion</h2>
-<p>The field of web development is evolving rapidly, driven by technological advancements and changing user expectations. By staying informed about emerging trends and embracing innovative technologies, developers can create immersive, secure, and user-centric web experiences that shape the future of the internet.</p>", author: 'Henrique Rohden', published: Date.new(2022, 4, 15))
+<p>The field of web development is evolving rapidly, driven by technological advancements and changing user expectations. By staying informed about emerging trends and embracing innovative technologies, developers can create immersive, secure, and user-centric web experiences that shape the future of the internet.</p>", author: author, published: Date.new(2022, 4, 15))
 
-Author.create(name: 'Henrique Rohden')
 # rubocop:enable Layout/LineLength
 # rubocop:enable Lint/RedundantCopDisableDirective
