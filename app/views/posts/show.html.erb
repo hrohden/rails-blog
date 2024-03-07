@@ -5,4 +5,7 @@
   <p class="text-end">Published by <%= link_to @post.author.name, @post.author %> at <%= @post.published.to_formatted_s(:long) %></p>
   <hr>
   <%= @post.content.html_safe %>
+  <hr>
+  <h2>Comments</h2>
+  <p><%= @post.comments.count %></p>
 </div>
