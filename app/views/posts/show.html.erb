@@ -5,7 +5,20 @@
   <p class="text-end">Published by <%= link_to @post.author.name, @post.author %> at <%= @post.published.to_formatted_s(:long) %></p>
   <hr>
   <%= @post.content.html_safe %>
+  <% if @post.comments.count > 0 %>
   <hr>
   <h2>Comments</h2>
-  <p><%= @post.comments.count %></p>
+  <% @post.comments.each do |comment| %>
+  <figure class="card">
+    <div class="card-body">
+      <blockquote class="blockquote">
+        <%= comment.body %>
+      </blockquote>
+    </div>
+    <div class="card-footer text-end">
+      Published at <%= comment.created_at.to_formatted_s(:long) %>
+    </div>
+  </figure>
+  <% end %>
+  <% end %>
 </div>
