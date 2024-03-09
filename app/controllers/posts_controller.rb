@@ -10,13 +10,15 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-  def new; end
+  def new
+    @post = Post.new(title: 'Test for a new post', headline: 'This is a dummy headline.', content: 'Blah blah blah')
+  end
 
   def create
     @post = Post.new(post_params)
 
     if @post.save
-      redirect_to @post, notice: 'Post was successfully created'
+      redirect_to posts_url(@post), notice: 'Post was successfully created'
     else
       render :new
     end
@@ -25,6 +27,9 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :headline, :content)
+    params
+      .require(:post)
+      .permit(:title, :headline, :content)
+      .merge(author_id: 1, published: DateTime.now, created_at: DateTime.now)
   end
 end
