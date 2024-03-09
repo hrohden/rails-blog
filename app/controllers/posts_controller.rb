@@ -11,7 +11,7 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new(title: 'Test for a new post', headline: 'This is a dummy headline.', content: 'Blah blah blah')
+    @post = Post.new(headline: 'This is a dummy headline.', content: 'Blah blah blah')
   end
 
   def create
