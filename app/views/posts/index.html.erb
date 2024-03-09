@@ -1,20 +1,4 @@
 <% content_for :title, "Posts" %>
 <h1>Posts</h1>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Author</th>
-      <th class="text-end">Published</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= link_to post.title, post %></td>
-        <td><%= link_to post.author.name, post.author %></td>
-        <td class="text-end"><%= post.published.to_formatted_s(:long) %></td>
-      </tr>
-    <% end %>
-  </tbody>
+<%= render 'table-posts', posts: @posts %>
 </table>
