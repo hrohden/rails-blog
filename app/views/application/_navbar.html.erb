@@ -13,6 +13,11 @@
           <%= link_to 'Authors', authors_path, class: "nav-link #{'active' if current_page?(authors_path)}" %>
         </li>
       </ul>
+      <ul class="navbar-nav">
+        <li>
+          <%= link_to 'New post', :posts_new, class: 'btn btn-primary' %>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
