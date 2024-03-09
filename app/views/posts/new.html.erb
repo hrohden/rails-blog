@@ -1,16 +1,16 @@
 <% content_for :title, 'New post' %>
 <div class="col-9">
   <h1>New post</h1>
-  <form>
+  <%= form_with(url: posts_path, local: true) do |form| %>
     <div class="mb-3">
-      <label for="post_title" class="form-label">Title</label>
-      <input type="text" class="form-control" id="post_title" name="post[title]">
+      <%= form.label :title, class: 'form-label' %>
+      <%= form.text_field :title, class: 'form-control' %>
     </div>
     <div class="mb-3">
-      <label for="post_body" class="form-label">Body</label>
-      <textarea class="form-control" id="post_body" name="post[body]" rows="10"></textarea>
+      <%= form.label :content, class: 'form-label' %>
+      <%= form.text_area :content, class: 'form-control', rows: 10 %>
     </div>
     <!-- Add any additional form fields here -->
-    <button type="submit" class="btn btn-primary">Create Post</button>
-  </form>
+    <%= form.submit 'Create post', class: 'btn btn-primary' %>
+  <% end %>
 </div>
