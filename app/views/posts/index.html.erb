@@ -1,4 +1,10 @@
 <% content_for :title, "Posts" %>
+<% if notice %>
+<div class="alert alert-primary" role="alert">
+  <%= notice %>
+</div>
+<% end %>
+
 <h1>Posts</h1>
 <%= render 'table-posts', posts: @posts %>
 </table>
