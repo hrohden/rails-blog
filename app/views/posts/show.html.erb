@@ -11,16 +11,7 @@
   <hr>
   <h2>Comments</h2>
   <% @post.comments.each do |comment| %>
-  <figure class="card">
-    <div class="card-body">
-      <blockquote class="blockquote">
-        <%= comment.body %>
-      </blockquote>
-    </div>
-    <div class="card-footer text-end">
-      Published at <%= comment.created_at.to_formatted_s(:long) %>
-    </div>
-  </figure>
+  <%= render 'comments/comment', comment: comment %>
   <% end %>
   <% end %>
 </div>
