@@ -10,7 +10,7 @@ class PostsController < ApplicationController
   def show; end
 
   def new
-    @post = Post.new(headline: 'This is a dummy headline.', content: 'Blah blah blah')
+    @post = Post.new
   end
 
   def edit; end
