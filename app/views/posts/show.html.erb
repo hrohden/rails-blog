@@ -1,9 +1,5 @@
 <% content_for :title, @post.title %>
-<% if notice %>
-<div class="alert alert-primary" role="alert">
-  <%= notice %>
-</div>
-<% end %>
+<%= render 'notice' %>
 
 <div class="col-9">
   <h1 class="display-1 text-center"><%= @post.title %></h1>
