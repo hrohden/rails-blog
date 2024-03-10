@@ -4,6 +4,7 @@
       <th>Title</th>
       <th>Author</th>
       <th class="text-end">Published</th>
+      <th class="text-end">Actions</th>
     </tr>
   </thead>
   <tbody>
@@ -12,6 +13,7 @@
         <td><%= link_to post.title, post %></td>
         <td><%= link_to post.author.name, post.author %></td>
         <td class="text-end"><%= post.published.to_formatted_s(:long) %></td>
+        <td class="text-end"><%= link_to 'Edit', 'post' %> <%= link_to 'Delete', 'delete...' %></td>
       </tr>
     <% end %>
   </tbody>
