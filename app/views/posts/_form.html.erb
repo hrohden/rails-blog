@@ -1,0 +1,25 @@
+<%= form_with(url: posts_path, local: true, model: post) do |form| %>
+  <div class="mb-3">
+    <%= form.label :title, class: 'form-label' %>
+    <%= form.text_field :title, class: post.errors[:title].any? ? 'form-control is-invalid' : 'form-control' %>
+    <% if post.errors[:title].any? %>
+      <div class="text-danger small"><%= post.errors[:title].join(', ') %></div>
+    <% end %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :headline, class: 'form-label' %>
+    <%= form.text_field :headline, class: post.errors[:headline].any? ? 'form-control is-invalid' : 'form-control' %>
+    <% if post.errors[:headline].any? %>
+      <div class="text-danger small"><%= post.errors[:headline].join(', ') %></div>
+    <% end %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :content, class: 'form-label' %>
+    <%= form.text_area :content, class: post.errors[:content].any? ? 'form-control is-invalid' : 'form-control', rows: 10 %>
+    <% if post.errors[:content].any? %>
+      <div class="text-danger small"><%= post.errors[:content].join(', ') %></div>
+    <% end %>
+  </div>
+  <!-- Add any additional form fields here -->
+  <%= form.submit 'Save', class: 'btn btn-primary' %>
+<% end %>
