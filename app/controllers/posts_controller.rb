@@ -2,7 +2,7 @@
 
 # This controller is responsible for handling requests to the blog post page
 class PostsController < ApplicationController
-  before_action :set_post, only: %i[show edit destroy]
+  before_action :set_post, only: %i[show edit destroy update]
   def index
     @posts = Post.all
   end
@@ -22,6 +22,14 @@ class PostsController < ApplicationController
       redirect_to posts_url(@post), notice: 'Post was successfully created'
     else
       render :new, status: :unprocessable_entity
+    end
+  end
+
+  def update
+    if @post.update(post_params)
+      redirect_to post_url(@post), notice: 'Post was successfully changed'
+    else
+      render :edit, status: :unprocessable_entity
     end
   end
 

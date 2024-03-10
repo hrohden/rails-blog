@@ -1,4 +1,4 @@
-<%= form_with(url: posts_path, local: true, model: post) do |form| %>
+<%= form_with(model: post) do |form| %>
   <div class="mb-3">
     <%= form.label :title, class: 'form-label' %>
     <%= form.text_field :title, class: post.errors[:title].any? ? 'form-control is-invalid' : 'form-control' %>
