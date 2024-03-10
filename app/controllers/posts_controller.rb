@@ -14,6 +14,10 @@ class PostsController < ApplicationController
     @post = Post.new(headline: 'This is a dummy headline.', content: 'Blah blah blah')
   end
 
+  def edit
+    @post = Post.find(params[:id])
+  end
+
   def create
     @post = Post.new(post_params)
 
