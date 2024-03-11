@@ -9,6 +9,7 @@ class PostsController < ApplicationController
 
   def show
     @new_comment = Comment.new
+    flash[:post_id] = @post.id
   end
 
   def new
