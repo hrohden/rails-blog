@@ -10,7 +10,7 @@
   <% if @post.comments.count > 0 %>
   <hr>
   <h2>Leave a comment!</h2>
-  <%= render 'comments/form', comment: @comment %>
+  <%= render 'comments/form', comment: @new_comment %>
   <hr>
   <h2>Comments</h2>
   <% @post.comments.each do |comment| %>
